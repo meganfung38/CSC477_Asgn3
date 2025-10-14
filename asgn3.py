@@ -29,7 +29,7 @@ chart_1 = (
     alt.Chart(data_1)  # load dataset
     .mark_bar()  # draw bars
     .encode(
-        x=alt.X("county:N", title="County"),  # X (categorical): counties
+        x=alt.X("county:N", title="County", sort="-y"),  # X (categorical): counties
         y=alt.Y("participation_rate:Q", title="CS Participation Rate", axis=alt.Axis(format="%")),  # Y (quantitative): participation rate
         color=alt.Color("sex:N", legend=alt.Legend(title="Gender")),  # add color and legend
         xOffset="sex:N",  # make male/female bars side by side
