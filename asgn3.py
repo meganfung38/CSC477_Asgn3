@@ -32,6 +32,7 @@ chart_1 = (
         x=alt.X("county:N", title="County", sort="-y"),  # X (categorical): counties
         y=alt.Y("participation_rate:Q", title="CS Participation Rate", axis=alt.Axis(format="%")),  # Y (quantitative): participation rate
         color=alt.Color("sex:N", legend=alt.Legend(title="Gender")),  # add color and legend
+        xOffset="sex:N",  # make male/female bars side by side
         tooltip=["county", "sex", alt.Tooltip("participation_rate:Q", format=".1%")]  # display values
     )
     .properties(title="CS Participation Rate by Gender and County (2018-2019)")  # add title
